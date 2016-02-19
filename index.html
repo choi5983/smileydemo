@@ -1,0 +1,42 @@
+<html>
+<head>
+	<title>Smiley Game Demo</title>
+
+	<style>
+	body{
+		margin:0px;
+		background-color:black;
+	}
+
+
+	</style>
+</head>
+<body>
+
+	<img id='character' src='http://www.smiley-faces.org/smiley-faces/smiley-face-angel-001.gif' style='position:absolute; top:50; left:50;' />
+
+	<script>
+	var position = {
+		x: 50,
+		y: 50
+	};
+
+	document.onkeydown = function(e){
+		console.log('keyCode', e.keyCode);
+
+		if(e.keyCode == 37){
+			position.x = position.x - 10;
+		}
+		else if(e.keyCode == 39){
+			position.x = position.x + 10;
+		}
+
+		document.getElementById('character').style.left = position.x;
+	}
+
+
+
+	</script>
+
+</body>
+</html>
